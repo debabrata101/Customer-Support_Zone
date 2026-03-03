@@ -3,19 +3,27 @@ import { GoPlus } from 'react-icons/go';
 
 const Navber = () => {
     return (
-        <div className="navbar bg-base-100 shadow-sm flex justify-between items-center p-4">
-         <div className='font-bold'>
-            <h1>CS — Ticket System</h1>
-         </div>
-         <div className='flex items-center gap-4 '>
-            <h1>Home</h1>
-            <h1>FAQ</h1>
-            <h1>Changelog</h1>
-            <h1>Blog</h1>
-            <h1>Download</h1>
-            <h1>Contact</h1>
-            <button className='flex items-center gap-2 bg-[#422AD5] rounded p-2 text-white'><GoPlus></GoPlus> New Ticket</button>
-         </div>
+
+        <div className="bg-white shadow-sm">
+            <div className="flex justify-between items-center p-4 max-w-[1200px] mx-auto">
+                <div className="font-bold text-lg">
+                    <h1>CS — Ticket System</h1>
+                </div>
+                <div className="hidden md:flex items-center gap-6 text-gray-600 font-medium">
+                    <a href="#" className="hover:text-[#422AD5] transition">Home</a>
+                    <a href="#" className="hover:text-[#422AD5] transition">FAQ</a>
+                    <a href="#" className="hover:text-[#422AD5] transition">Changelog</a>
+                    <a href="#" className="hover:text-[#422AD5] transition">Blog</a>
+                    <a href="#" className="hover:text-[#422AD5] transition">Download</a>
+                    <a href="#" className="hover:text-[#422AD5] transition">Contact</a>
+
+                    <button className="flex items-center gap-2 bg-[#422AD5] hover:bg-[#341bb3] transition text-white px-4 py-2 rounded-md">
+                        <GoPlus />
+                        New Ticket
+                    </button>
+                </div>
+
+            </div>
         </div>
     );
 };

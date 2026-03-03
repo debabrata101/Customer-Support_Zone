@@ -3,7 +3,7 @@ import vector1 from '../../assets/vector1.png'
 const Banner = () => {
     return (
         <div className="bg-gray-200 p-6">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
 
                 {/* In-Progress Card */}
                 <div className="relative h-44 rounded-lg overflow-hidden text-white 
