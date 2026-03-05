@@ -1,11 +1,19 @@
-import React from 'react';
+import TicketCard from "./TicketCard";
 
-const TicketList = () => {
-    return (
-        <div>
-            
-        </div>
-    );
-};
+export default function TicketList({ tickets,addTask }) {
+  return (
+    <div>
+      <h2 className="text-xl font-semibold mb-4">Customer Tickets</h2>
 
-export default TicketList;
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+        {tickets.map((ticket) => (
+          <TicketCard
+            key={ticket.id}
+            ticket={ticket}
+            addTask={addTask}
+          />
+        ))}
+      </div>
+    </div>
+  );
+}

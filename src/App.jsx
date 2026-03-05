@@ -13,9 +13,12 @@ function App() {
   return (
     <>
       <Navber></Navber>
-      <Banner></Banner>
+      <Banner
+      inProgress ={tasks.length}
+      resolved = {resolved.length}
+      ></Banner>
 
-      <div className='max-w-[1200px] mx-auto p-6 grid lg:grid-cols-3 gap-6'>
+      <div className='max-w-[1200px] mx-auto p-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
         <div className="lg:col-span-2">
           <TicketList tickets={tickets}
            addTask={addTask}
@@ -23,6 +26,7 @@ function App() {
         </div>
         <TaskStatus
         tasks={tasks}
+        resolved={resolved}
         completeTask={completeTask}
         ></TaskStatus>
       </div>
